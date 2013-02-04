@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "version": "",
+  "dependencies": {
+    "jquery": "*",
+    "seajs": "*",
+    "lilyturf": "git://github.com/jiyinyiyong/lilyturf.git",
+    "my-scaffold": "git://github.com/jiyinyiyong/my-scaffold.git",
+    "coffee-script": "~1.4.0"
+  }
+}

@@ -1,0 +1,22 @@
+
+doctype 5
+html
+  head
+    title Metro
+    meta(charset="utf-8")
+    link(rel="stylesheet",href="page.css")
+    link(rel="stylesheet",href="program/app.css")
+    link(rel="stylesheet",href="terminal/app.css")
+    link(rel="stylesheet",href="grid/app.css")
+    link(rel="stylesheet",href="config/app.css")
+    script(src="http://localhost:7777/doodle.js")
+    script(src="../components/seajs/dist/sea.js")
+    script(src="../components/jquery/jquery.js")
+    script(src="../components/lilyturf/page/lilyturf.js")
+    script(src="../components/my-scaffold/base.js")
+    script(src="../components/coffee-script/extras/coffee-script.js")
+    link(rel="stylesheet", href="../components/my-scaffold/base.css")
+    script
+      seajs.use("./main.js")
+  body
+    #view

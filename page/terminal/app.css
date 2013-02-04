@@ -1,0 +1,47 @@
+.terminal {
+  width: 100%;
+  z-index: 10;
+  position: absolute;
+  bottom: 0px;
+  background: rgba(192,168,240,0.3);
+  margin: 0px auto;
+}
+.terminal .glass {
+  width: 90%;
+  height: 100%;
+  margin: 0px auto;
+  background: rgba(173,31,78,0.8);
+  display: -webkit-flex;
+}
+.terminal .glass .code,
+.terminal .glass .output {
+  width: 50%;
+  height: 100%;
+  padding: 12px;
+  color: #fff;
+}
+.terminal .glass .code ::selection,
+.terminal .glass .output ::selection {
+  background: #f5bea3;
+  color: #000;
+}
+.terminal .glass .code {
+  background: rgba(64,64,191,0.2);
+}
+.terminal .glass .output {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  overflow: auto;
+}
+.terminal .glass .output #run {
+  width: 40px;
+  background: #d1d1fa;
+  padding: 4px 6px;
+}
+.terminal .glass .output #outlog {
+  width: 100%;
+}
+.terminal .glass .output #outlog .logline {
+  background: rgba(92,37,10,0.2);
+  margin: 14px 0px;
+}

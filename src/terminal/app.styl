@@ -1,0 +1,45 @@
+
+.terminal
+  width 100%
+  z-index 10
+  position absolute
+  bottom 0px
+  background hsla(260,70,80,0.3)
+  margin 0px auto
+
+  .glass
+    width 90%
+    height 100%
+    margin 0px auto
+    background hsla(340,70,40,0.8)
+    display -webkit-flex
+
+    .code, .output
+      width 50%
+      height 100%
+      padding 12px
+      color white
+
+      ::selection
+        background hsl(20,80,80)
+        color black
+
+    .code
+      background hsla(240,50,50,0.2)
+
+    .output
+      display -webkit-flex
+      -webkit-flex-direction column
+      overflow auto
+
+      #run
+        width 40px
+        background hsl(240,80,90)
+        padding 4px 6px
+
+      #outlog
+        width 100%
+
+        .logline
+          background hsla(20,80,20,0.2)
+          margin 14px 0px
