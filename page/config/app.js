@@ -5,11 +5,20 @@ define(function(require, exports) {
   elem = $(lilyturf.dom(function() {
     return this.div({
       "class": "config"
-    });
+    }, this.div({
+      "class": "options"
+    }), this.div({
+      "class": "control"
+    }, this.div({
+      "class": "button hide"
+    }, this.text("hide"))));
   }));
   $("body").append(elem);
   elem.css({
     width: "0%"
+  });
+  elem.find(".hide").click(function() {
+    return exports.config.hide();
   });
   return exports.config = {
     elem: elem,

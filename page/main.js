@@ -2,7 +2,7 @@
 var __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
 define(function(require, exports) {
-  var config, main, terminal, viewport;
+  var config, data, grid, program, terminal, viewport;
   require("./extend");
   viewport = {
     width: window.innerWidth,
@@ -29,16 +29,15 @@ define(function(require, exports) {
   window.addEventListener("resize", function() {
     return viewport.update();
   });
-  terminal = require("./terminal/app");
   config = require("./config/app");
-  main = {
-    grid: require("./grid/app"),
-    program: require("./program/app"),
-    state: void 0,
-    load: function(name) {}
-  };
-  return window.expose = {
-    config: config,
-    term: terminal
-  };
+  terminal = require("./terminal/app");
+  grid = require("./grid/app");
+  program = require("./program/app");
+  window.config = config;
+  window.terminal = terminal;
+  window.grid = grid;
+  window.program = program;
+  data = require("./data");
+  grid.data = data.grid;
+  return grid.show();
 });

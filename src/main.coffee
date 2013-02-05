@@ -22,17 +22,19 @@ define (require, exports) ->
   window.addEventListener "resize", ->
     viewport.update()
   
-  terminal = require "./terminal/app"
   config = require "./config/app"
+  terminal = require "./terminal/app"
+  grid = require "./grid/app"
+  program = require "./program/app"
 
-  main =
-    grid: require "./grid/app"
-    program: require "./program/app"
-    state: undefined
-    load: (name) ->
+  window.config = config
+  window.terminal = terminal
+  window.grid = grid
+  window.program = program
 
-  window.expose =
-    config: config
-    term: terminal
+  data = require "./data"
+  grid.data = data.grid
 
   # terminal.show()
+  # config.show()
+  grid.show()

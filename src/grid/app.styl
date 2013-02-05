@@ -1,0 +1,48 @@
+
+$width = 360px
+
+.grid
+  display -webkit-flex
+  -webkit-flex-direction row
+
+  .apps, .tasks, .notes
+    width 340px
+    height 100%
+
+    .title
+      height 60px
+      padding 10px
+      font-size 30px
+      color hsla(0,0,0,0.2)
+
+    .card
+      height 100px
+      margin 10px
+      background hsla(240,50,80,0.5)
+      padding 10px
+      opacity 0
+      font-size 24px
+
+    .card.emerge
+      -webkit-transform scale(1)
+      opacity 1
+      width $width
+
+  .apps .card
+    -webkit-transform scale(0.96)
+    -webkit-transition-duration 0.04s
+    width $width * 0.92
+
+  .tasks .card
+    -webkit-transform scale(0.92)
+    -webkit-transition-duration 0.16s
+    width $width * 0.86
+
+  .notes .card
+    -webkit-transform scale(0.84)
+    -webkit-transition-duration 0.32s
+    width $width * 0.70
+
+  * 
+    height 100%
+    width 100%

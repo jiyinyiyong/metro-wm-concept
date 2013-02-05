@@ -4,7 +4,7 @@
   z-index 10
   position absolute
   bottom 0px
-  background hsla(260,70,80,0.3)
+  background hsla(260,0,80,0.7)
   margin 0px auto
 
   .glass
@@ -32,14 +32,16 @@
       -webkit-flex-direction column
       overflow auto
 
-      #run
-        width 40px
-        background hsl(240,80,90)
-        padding 4px 6px
-
+      .control
+        height 30px
+        display -webkit-flex
+        -webkit-flex-direction row
+        
       #outlog
         width 100%
 
         .logline
           background hsla(20,80,20,0.2)
           margin 14px 0px
+          height auto
+          padding 10px

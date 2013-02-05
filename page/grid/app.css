@@ -1,0 +1,54 @@
+.grid {
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+}
+.grid .apps,
+.grid .tasks,
+.grid .notes {
+  width: 340px;
+  height: 100%;
+}
+.grid .apps .title,
+.grid .tasks .title,
+.grid .notes .title {
+  height: 60px;
+  padding: 10px;
+  font-size: 30px;
+  color: rgba(0,0,0,0.2);
+}
+.grid .apps .card,
+.grid .tasks .card,
+.grid .notes .card {
+  height: 100px;
+  margin: 10px;
+  background: rgba(179,179,230,0.5);
+  padding: 10px;
+  opacity: 0;
+  font-size: 24px;
+}
+.grid .apps .card.emerge,
+.grid .tasks .card.emerge,
+.grid .notes .card.emerge {
+  -webkit-transform: scale(1);
+  opacity: 1;
+  width: 360px;
+}
+.grid .apps .card {
+  -webkit-transform: scale(0.96);
+  -webkit-transition-duration: 0.04s;
+  width: 331.2px;
+}
+.grid .tasks .card {
+  -webkit-transform: scale(0.92);
+  -webkit-transition-duration: 0.16s;
+  width: 309.6px;
+}
+.grid .notes .card {
+  -webkit-transform: scale(0.84);
+  -webkit-transition-duration: 0.32s;
+  width: 251.99999999999997px;
+}
+.grid * {
+  height: 100%;
+  width: 100%;
+}
